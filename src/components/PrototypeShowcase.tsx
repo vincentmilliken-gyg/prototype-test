@@ -9,11 +9,11 @@ interface PrototypeShowcaseProps {
 
 export default function PrototypeShowcase({ data, children }: PrototypeShowcaseProps) {
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center px-[202px] py-[65px]">
+    <div className="bg-white min-h-screen flex flex-col items-center px-[202px] py-[6px]">
       <div className="flex gap-[133px] items-start justify-center w-full">
         {/* iPhone Preview Area */}
         <IPhoneMockup>
-          {children}  1
+          {children} 
         </IPhoneMockup>
 
         {/* Context/Info Card */}

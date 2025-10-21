@@ -65,7 +65,7 @@ interface CardLargeProps {
 
 function CardLarge({ data, isActive }: CardLargeProps) {
   return (
-    <div className="bg-white border border-[#ebeef1] border-solid flex flex-col items-start p-2 rounded-2xl shrink-0 w-[312px] min-h-[380px]">
+    <div className="bg-white border border-[#ebeef1] border-solid flex flex-col items-start p-2 rounded-2xl shrink-0 w-[312px]">
       {/* Image section */}
       <div className="w-full h-[269px] relative rounded-[10px] overflow-hidden">
         <img
@@ -133,31 +133,33 @@ function CardLarge({ data, isActive }: CardLargeProps) {
 
       {/* CTA Button - only show when active and card has button */}
       {data.hasBookButton && (
-        <motion.div 
-          className="w-full px-[1px] overflow-hidden"
-          initial={{ height: 0, opacity: 0, marginTop: 0 }}
-          animate={isActive ? { 
-            height: "auto", 
-            opacity: 1,
-            marginTop: 4,
-            transition: { 
-              duration: 0.3,
-              ease: "easeOut"
-            }
-          } : { 
-            height: 0, 
-            opacity: 0,
-            marginTop: 0,
-            transition: { 
-              duration: 0.2,
-              ease: "easeIn"
-            }
-          }}
-        >
-          <button className="w-full bg-[#0071eb] text-white text-sm font-medium rounded-full px-4 py-2 min-h-[36px] hover:bg-[#0060d1] transition-colors">
+        <div className="w-full px-2 mt-1 h-[36px]">
+          <motion.button 
+            className="w-full bg-[#0071eb] text-white text-sm font-medium rounded-full px-4 py-2 h-full hover:bg-[#0060d1] transition-colors"
+            initial={{ opacity: 0, scale: 0.95, y: -8 }}
+            animate={isActive ? { 
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              transition: { 
+                duration: 0.25,
+                ease: [0.4, 0, 0.2, 1]
+              }
+            } : { 
+              opacity: 0,
+              scale: 0.95,
+              y: -8,
+              transition: { 
+                duration: 0.2,
+                ease: [0.4, 0, 1, 1]
+              }
+            }}
+            disabled={!isActive}
+            style={{ pointerEvents: isActive ? 'auto' : 'none' }}
+          >
             Book now
-          </button>
-        </motion.div>
+          </motion.button>
+        </div>
       )}
     </div>
   );
