@@ -50,7 +50,7 @@ export default function PrototypeInfoCard({ data }: PrototypeInfoCardProps) {
         {/* Links Section */}
         <div className="flex flex-col gap-[8px]">
           <p className="font-semibold text-[14px] leading-[1.2] text-[#1e1e1e] tracking-[-0.28px]">
-            Links
+            View these prototypes on a mobile device
           </p>
         </div>
 

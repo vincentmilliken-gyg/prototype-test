@@ -8,8 +8,8 @@ import ExampleMobileCard2 from "@/components/ExampleMobileCard2";
 import { PrototypeData } from "@/types/prototype";
 
 const samplePrototype: PrototypeData = {
-  title: "Prototype",
-  description: "Interactive mobile prototype with multiple views. Click through different examples using the tabs or navigation arrows.",
+  title: "Prototype labs",
+  description: "Interactive mobile prototype with multiple views. Click through different examples using the navigation arrows.",
   links: [
     {
       text: "Prototype 1 (opens in new tab)",
