@@ -196,7 +196,7 @@ export default function ExampleMobileCard() {
   const [stiffness, setStiffness] = useState(300);
   const [damping, setDamping] = useState(30);
   const [momentum, setMomentum] = useState(1);
-  const [showDebug, setShowDebug] = useState(true);
+  const [showDebug, setShowDebug] = useState(false);
   const x = useMotionValue(0);
   
   const CARD_WIDTH = 312;
