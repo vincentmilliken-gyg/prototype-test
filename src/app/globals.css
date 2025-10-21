@@ -3,11 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --emerald-100: #d1fae5;
+  --gray-900: #101828;
+  --blue-8: #1971c2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-emerald-100: var(--emerald-100);
+  --color-gray-900: var(--gray-900);
+  --color-blue-8: var(--blue-8);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
